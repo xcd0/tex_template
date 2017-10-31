@@ -1,4 +1,3 @@
-
 # このMakefileはtexのタイプセットを行います。
 # platexとdvipdfmxが動く前提です。
 # これらは変更することができます。
@@ -30,7 +29,7 @@ ifeq ($(OS),Windows_NT)
 else
 	UNAME = ${shell uname}
 	ifeq ($(UNAME),Linux)
-		OS_CHECK=echo "Linux"
+		OS_CHECK=Linux
 
 		####### for Linux ##########
 		# pdfを開くコマンド
