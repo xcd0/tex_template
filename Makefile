@@ -6,7 +6,7 @@
 # 画像のパス
 IMG_DIR=./img
 
-# 拡張子.texのファイルの拡張子を省いた文字列
+# 拡張子.texのファイルの拡張子を省略した文字列を取得
 TEXFILES=$(shell \ls|grep .tex|sed -e 's/.tex//g')
 TEX=$(FILENAME).tex
 IDX=$(FILENAME).idx
