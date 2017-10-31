@@ -21,11 +21,11 @@ ifeq ($(OS),Windows_NT)
 	OS_CHECK=Windows
 
 	####### for Windows ########
-	# 今のところwindows向けのコマンドは設定しない
+	# 今のところwindows向けのコマンドは設定していない
 	# pdfを開くコマンド
-	PDF_VIEWER=echo
+	PDF_VIEWER=pdfopen
 	# xbbファイルを生成するコマンド
-	MAKE_XBB=echo
+	MAKE_XBB=extractbb
 else
 	UNAME = ${shell uname}
 	ifeq ($(UNAME),Linux)
@@ -49,7 +49,7 @@ else
 endif
 ############################
 
-# {{{
+
 all:
 	@echo $(OS_CHECK)
 #	make img
