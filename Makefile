@@ -23,7 +23,7 @@ ifeq ($(OS),Windows_NT)
 	####### for Windows ########
 	# 今のところwindows向けのコマンドは設定していない
 	# pdfを開くコマンド
-	PDF_VIEWER=pdfopen
+	PDF_VIEWER=pdfopen --file
 	# xbbファイルを生成するコマンド
 	MAKE_XBB=extractbb
 else
