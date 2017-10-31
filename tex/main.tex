@@ -1,0 +1,140 @@
+% UTF-8 LF
+% プリアンブル{{{
+\documentclass[12pt,a4j]{jarticle}
+\usepackage{tabularx}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{here}
+\usepackage{graphicx}
+%\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{cases}
+\usepackage{ulem}
+\usepackage{otf}
+\usepackage{listings,jlisting}
+\lstset{
+	language={C},
+	numbers=left,
+	breaklines=true,
+	basicstyle={\scriptsize},
+	%identifierstyle={\small},
+	identifierstyle={\scriptsize},
+	%commentstyle={\small\itshape},
+	commentstyle={\scriptsize\ttfamily},
+	%keywordstyle={\small\bfseries},
+	keywordstyle={\scriptsize\ttfamily},
+	%ndkeywordstyle={\small},
+	ndkeywordstyle={\scriptsize},
+	%stringstyle={\small\ttfamily},
+	stringstyle={\scriptsize\ttfamily},
+	frame={tb},
+	columns=[l]{fullflexible},
+	xrightmargin=0zw,
+	xleftmargin=3zw,
+	%numberstyle={\scriptsize},
+	numberstyle={\tiny},
+	stepnumber=1,
+	numbersep=1zw,
+	lineskip=-0.5ex
+}
+\graphicspath{{./img/}}
+\newcommand{\ifdraft}{false}
+% }}}
+
+\title{%\vspace{-2cm}
+情報電気電子工学実験第二 \\
+第3B章 組み込みシステムを用いた計測と制御
+}\author{
+154-T6901 早\ajTatsuSaki\ 悠登
+}\date{}
+
+\begin{document}
+
+\maketitle
+
+%\newpage
+
+%----------------------------------------------
+\section{実験目的}
+
+
+\input{1/sub.tex}
+\input{2/sub.tex}
+
+
+%----------------------------------------------
+\section{結論}
+
+
+%----------------------------------------------
+% 参考文献
+\begin{thebibliography}{9}%参考文献が9個を超える時は{99}にする
+	\bibitem{bib1} あああああ
+\end{thebibliography}
+
+\newpage
+\section*{付録}
+%\lstinputlisting[basicstyle=\ttfamily\footnotesize, frame=single]{./src/aaa.c}
+
+% 数式、画像、表、ソースコード添付の例{{{
+\if0
+============================================================================
+
+==== 数式の例 ====
+
+\begin{eqnarray}
+	&	=	&	\\
+	&	=	&	\nonumber \\
+	&	=	&	
+\end{eqnarray}
+
+
+==== 画像の例 ====
+
+\begin{figure}[H]
+	\centering
+	% \includegraphics[width=9cm]{./img/c13.png}
+	\caption{あああああ}
+	\label{aaaaaa}
+\end{figure}
+
+
+==== 表の例 ====
+
+表のセルを結合したい場合\multirow{}{}{} \multicolumn{}{}{}を使います.
+\begin{table}[H]の[H]は大文字です.ちゃんと意味があるので小文字にしないでください.
+\scalebox{}{}は表の縦横の幅を拡縮することができます.
+
+\begin{table}[H]
+	\centering
+	\caption{定電圧源等価回路における回路の内部抵抗}
+	\label{c16}
+	%\scalebox{1.2}[1.2]{
+	\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+		&	$P\ [\Omega]$	&	$Q\ [\Omega]$	&	$R\ [\Omega]$	&	$X\ [\Omega]$	&	$R_0\ [\Omega]$ \\ \hline
+		&	\multirow{2}{*}{10}	&	\multirow{2}{*}{100}	&	1006.7	&	99.93	&	$1.653\times10^5$ \\ \cline{4-6}
+		&	&	&	992	&	99.93	&	$1.635\times10^5$ \\ \hline
+		&	\multirow{3}{*}{100}	&	\multirow{3}{*}{1000}	&	1017	&	100.92	&	$1.589\times10^5$ \\ \cline{4-6}
+		&	&	&	1013.1	&	100.92	&	$3.162\times10^5$ \\ \cline{4-6}
+		&	&	&	1001.4	&	100.92	&	$1.568\times10^5$ \\ \hline
+		&	\multirow{4}{*}{1000}	&	\multirow{4}{*}{10000}	&	1050.4	&	100.99	&	$3.166\times10^4$ \\ \cline{4-6}
+		&	&	&	1030.2	&	100.99	&	$6.195\times10^4$	\\ \cline{4-6}
+		&	&	&	990	&	100.99	&	$6.074\times10^4$	\\ \cline{4-6}
+		&	&	&	971	&	100.99	&	$3.048\times10^4$	\\ \hline
+	平均値	&	-	&	-	&	-	&	-	&	$1.748\times10^5$	\\ \hline
+	\end{tabular}
+	%}
+\end{table}
+
+==== ソースコードを載せる例 ====
+
+\lstinputlisting[basicstyle=\ttfamily\footnotesize, frame=single]{./ああああああ.txt}
+
+============================================================================
+\fi
+
+\end{document}
+% }}}
+
