@@ -12,12 +12,12 @@ main.texのあるディレクトリでmakeすれば、すべてまとめてタ�
 
 # サブディレクトリについて
 サブディレクトリの構成
-	任意のサブディレクトリ名
-	├── Makefile -> ../Makefile
-	├── img -> ../img
-	├── src -> ../src
-	├── sub.tex
-	└── jlisting.sty
+    任意のサブディレクトリ名
+    ├── Makefile -> ../Makefile
+    ├── img -> ../img
+    ├── src -> ../src
+    ├── sub.tex
+    └── jlisting.sty
 
 サブディレクトリの名前はmain.texの\include{}のパスを書き換えることで、
 任意の名前を設定できます。
@@ -31,12 +31,12 @@ Makefile,img,srcはmain.texのシンボリックリンクで、実体はより�
 このとき普通に`cp -r 1 2`のようにするとシンボリックリンクが正しくコピーされません。
 正しくコピーするためには`cp -Rfa 1 2`のようにしてコピーします。
 もしシンボリックリンクが壊れてしまった場合以下のコマンドを実行します。
-	cd (サブディレクトリのパス)
-	ln -sf ../Makefile
-	ln -sf ../img
-	ln -sf ../src
-	cd ..
-	ln -sf ../Makefile
+    cd (サブディレクトリのパス)
+    ln -sf ../Makefile
+    ln -sf ../img
+    ln -sf ../src
+    cd ..
+    ln -sf ../Makefile
 
 imgとsrcディレクトリの実態はmain.texと同じ階層にあるimgとsrcです。
 Makefileの実体はmain.texのある階層の一つ上にしています。
