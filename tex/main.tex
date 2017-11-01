@@ -65,17 +65,19 @@
 
 \input{2/sub.tex}
 
+
 %----------------------------------------------
 % 参考文献の例をこのファイルに記述していますが
 % 一貫性を保ちたければ別のtexに記述すべきでしょう
 
 % 参考文献
-\begin{thebibliography}{9}%参考文献が9個を超える時は{99}にする
-	\bibitem{bib1} あああああ
+\begin{thebibliography}{9} %参考文献が9個を超える時は{99}にします
+	\bibitem{bib1} 参考文献
 \end{thebibliography}
 
 \newpage
 \section*{付録}
+% ソースコードを載せるとき
 %\lstinputlisting[basicstyle=\ttfamily\footnotesize, frame=single]{./src/aaa.c}
 
 % 数式、画像、表、ソースコード添付の例{{{
@@ -90,9 +92,7 @@
 	&	=	&	
 \end{eqnarray}
 
-
-==== 画像の例 ====
-
+==== 画像の例 ==== 
 \begin{figure}[H]
 	\centering
 	% \includegraphics[width=9cm]{./img/c13.png}
@@ -103,9 +103,9 @@
 
 ==== 表の例 ====
 
-表のセルを結合したい場合\multirow{}{}{} \multicolumn{}{}{}を使います.
-\begin{table}[H]の[H]は大文字です.ちゃんと意味があるので小文字にしないでください.
-\scalebox{}{}は表の縦横の幅を拡縮することができます.
+表のセルを結合したい場合\multirow{}{}{} \multicolumn{}{}{}を使います。
+\begin{table}[H]の[H]は大文字です。
+\scalebox{}{}は表の縦横の幅を拡縮することができます。
 
 \begin{table}[H]
 	\centering
