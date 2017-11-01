@@ -79,7 +79,6 @@ sub.texではプそのマクロifDividingが定義されていればsub.texプ�
 main.texをタイプセットするとマクロifDividingが定義されるためsub.texのプリアンブルが読み込まれず、  
 それ以外の本文だけが読み込まれることになり、すべてのtexを含んだ状態でタイプセットすることができます。  
 
-参考URL
-[効率的な LaTeX ファイル分割術](https://qiita.com/wtsnjp/items/6ba3b8e12514d8a3bd41)
+参考URL : [効率的な LaTeX ファイル分割術](https://qiita.com/wtsnjp/items/6ba3b8e12514d8a3bd41)
 
 
