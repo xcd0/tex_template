@@ -1,12 +1,11 @@
 # このMakefileはtexのタイプセットを行います。
-# platexとdvipdfmxが動く前提です。
-# これらは変更することができます。
-# 注意としてこのMakefileは各ディレクトリに複数のtexがあると誤動作します。
+# platexとdvipdfmxが動く事を前提としています。
+# これらのコマンドは変更することができます。
 
 # 画像のパス
 IMG_DIR=./img
 
-# 拡張子.texのファイルの拡張子を省いた文字列
+# 拡張子.texのファイルの拡張子を省略した文字列を取得
 TEXFILES=$(shell \ls|grep .tex|sed -e 's/.tex//g')
 TEX=$(FILENAME).tex
 IDX=$(FILENAME).idx
@@ -20,10 +19,9 @@ OUTPUT=output_$(FILENAME).pdf
 ifeq ($(OS),Windows_NT)
 	OS_CHECK=Windows
 
-	####### for Windows ########
-	# 今のところwindows向けのコマンドは設定していない
+	####### for Windows #######
 	# pdfを開くコマンド
-	PDF_VIEWER=pdfopen --file
+	PDF_VIEWER=
 	# xbbファイルを生成するコマンド
 	MAKE_XBB=extractbb
 else
