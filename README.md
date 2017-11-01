@@ -72,11 +72,11 @@ main.texやsub.texのプリアンブルには特殊な処理を書いていま�
 これを防ぐために全てのtexで特殊な処理を記述しています。
 
 プリアンブルの特殊な処理について簡単の説明します。  
-main.texでは新しくマクロifDividingを定義していて、sub.texでは定義していません。  
-sub.texではプそのマクロifDividingが定義されていればsub.texプリアンブルが読み込まれません。   
+main.texでは新しくマクロ`ifDividing`を定義していて、sub.texでは定義していません。  
+sub.texではプそのマクロ`ifDividing`が定義されていればsub.texプリアンブルが読み込まれません。   
 
 つまりsub.texをタイプセットするときは、sub.texのプリアンブルが読み込まれ通常通りタイプセットでき、  
-main.texをタイプセットするとマクロifDividingが定義されるためsub.texのプリアンブルが読み込まれず、  
+main.texをタイプセットするとマクロ`ifDividing`が定義されるためsub.texのプリアンブルが読み込まれず、  
 それ以外の本文だけが読み込まれることになり、すべてのtexを含んだ状態でタイプセットすることができます。  
 
 参考URL : [効率的な LaTeX ファイル分割術](https://qiita.com/wtsnjp/items/6ba3b8e12514d8a3bd41)
